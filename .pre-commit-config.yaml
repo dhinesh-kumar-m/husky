@@ -4,3 +4,9 @@ repos:
     hooks:
     - id: black
       language_version: python3
+-   repo: local
+    hooks:
+    - id: eslint
+      name: eslint
+      entry: bash -c "cd frontend && npx eslint --fix 'src/**/*.vue'"
+      language: node
